@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var pool_size: int = 2000
+@export var pool_size: int = 500
 var pool: Array = []
 @onready var bullet_scene: PackedScene = preload("res://scenes/bullet/bullet_in_pool.tscn")
 
