@@ -6,6 +6,9 @@ extends Node2D
 @onready var _trigger_scene: PackedScene = preload("res://scenes/instantiators/trigger_instanciating.tscn")
 
 func _ready() -> void:
+	for bullet in BulletPool.pool:
+		bullet.queue_free()
+	
 	var spawn_coord: Vector2 = Vector2(0, 648)
 	
 	for trigger in range(_trigger_quantity):

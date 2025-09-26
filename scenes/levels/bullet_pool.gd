@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var pool_size: int = 500
+@export var pool_size: int = 2000
 var pool: Array = []
 @onready var bullet_scene: PackedScene = preload("res://scenes/bullet/bullet_in_pool.tscn")
 
@@ -13,18 +13,21 @@ func _ready() -> void:
 		add_child(bullet)
 		pool.append(bullet)
 
-func get_bullet() -> Node2D:
-	for bullet in BulletPool.pool:
+func get_bullet():
+	for bullet in pool:
 		if not bullet.is_visible():
 			return bullet
 	
-	var new_bullet = bullet_scene.instantiate()
-	new_bullet.hide()
-	new_bullet.set_process(false)
-	new_bullet.set_physics_process(false)
-	add_child(new_bullet)
-	pool.append(new_bullet)
-	return new_bullet
+	if pool.size() < 2000:
+		var new_bullet = bullet_scene.instantiate()
+		new_bullet.hide()
+		new_bullet.set_process(false)
+		new_bullet.set_physics_process(false)
+		add_child(new_bullet)
+		pool.append(new_bullet)
+		return new_bullet
+	
+	return null
 	
 	
 	#for bullet in BulletPool.pool:
