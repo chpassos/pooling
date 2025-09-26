@@ -20,6 +20,13 @@ Before reaching that number, I didn’t notice a significant performance differe
 3. Compare how they behave as the number of bullets increases  
 
 ---
+## Testing!
+### Instantiating:
+![instantiating_scene](https://github.com/user-attachments/assets/9b691bae-535b-4715-a521-8523d4279aef)
 
+### Pooling:
+![pooling_scene](https://github.com/user-attachments/assets/94e6f4ed-5d23-4194-8898-5de5116947d2)
+
+---
 This project is mostly experimental and a learning exercise.  
-Feel free to **try it out, share your results, and suggest improvements!** 
+Feel free to **try it out!** 
