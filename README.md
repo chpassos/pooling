@@ -10,7 +10,7 @@ I compared two different approaches:
 ---
 
 On my machine, performance started to drop at around **2500 bullets** on screen.  
-Before reaching that number, I didn’t notice a significant performance difference between the two approaches: most likely due to a **suboptimal implementation** of pooling in this test.
+Before reaching that number, I didn’t notice a significant performance difference between the two approaches. However, it appears that instantiating on the fly has a slightly better performance with high bullet count; most likely due to a **suboptimal implementation** of pooling in this test.
 
 ---
 
