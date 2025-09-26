@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce1va8m28g1q7"]
+
+[ext_resource type="PackedScene" uid="uid://dnwleef6gy5eu" path="res://scenes/HUD/fps_counter.tscn" id="1_m11yx"]
+[ext_resource type="Script" uid="uid://bfyenaup5g7hd" path="res://scenes/levels/pooling_scene.gd" id="1_uwth6"]
+
+[node name="PoolingScene" type="Node2D"]
+script = ExtResource("1_uwth6")
+
+[node name="InstancingContainer" type="Node2D" parent="."]
+
+[node name="FPSCounter" parent="." instance=ExtResource("1_m11yx")]
